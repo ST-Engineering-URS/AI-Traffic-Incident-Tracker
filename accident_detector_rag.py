@@ -1,6 +1,5 @@
 
 
-from huggingface_hub import login
 import os
 import torch
 from PIL import Image
@@ -12,8 +11,7 @@ from janus.models import MultiModalityCausalLM, VLChatProcessor
 from janus.utils.io import load_pil_images
 
 # --- 1. 登录 Hugging Face ---
-def setup_hf(token: str = "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"):
-    login(token=token)
+
 
 # --- 2. 加载 Janus-Pro-7B 视觉模型 ---
 def load_vision_model(model_id: str = "deepseek-ai/Janus-Pro-7B"):
